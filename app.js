@@ -1,3 +1,6 @@
+/*
+This is the constructor that creates ships and all there functions
+*/
 class ship {
     constructor(name,hull, firepower,accuracy) {
       this.name = name;
@@ -31,6 +34,9 @@ class ship {
         }
     }
   }
+  /*
+  This function handles the choice for the player to attack or retreat
+  */
 function playerChoice(){
     let choice = prompt("Do you attack or retreat?", "Please type attack or retreat");
     if(choice.toLowerCase()==='retreat'){
@@ -44,14 +50,14 @@ function playerChoice(){
         playerChoice();
     }
 }
+
+/* 
+This function generates a random number within the min and max range
+*/
 function getRandom(min, max) {
     return Math.random() * (max - min + 1) + min;
 }
-//let random = Math.round(Math.random()*100)/100;
-//let random = Math.round(Math.random()*6);
-
-//USSSchwarzenegger.statusCheck();
-//console.log(USSSchwarzenegger.getHull);
+//this function starts the game
 const startGame = () => {
     console.log('%c spacebattle', 'font-size: 40px');
     let  USSSchwarzenegger = new ship('USSSchwarzenegger',20,5,.7);
